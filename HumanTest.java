@@ -64,7 +64,7 @@ public class HumanTest {
         System.out.println("d) TreeSet с компаратором по фамилии: " + treeSetByLastName);
 
         // e) TreeSet с анонимным компаратором по возрасту
-        Set<Human> treeSetByAge = new TreeSet<>(Comparator.comparingInt(Human::getAge)); // 
+        Set<Human> treeSetByAge = new TreeSet<>(Comparator.comparing(Human::getAge));
         treeSetByAge.addAll(humans);
         System.out.println("e) TreeSet с компаратором по возрасту: " + treeSetByAge);
     }
